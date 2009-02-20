@@ -1,0 +1,12 @@
+AUTHORS
+CHANGELOG
+COPYING
+INSTALL
+LICENSE
+MANIFEST
+README
+TODO
+setup.py
+qombinatorics/QombGui.py
+qombinatorics/__init__.py
+scripts/qombinatorics
