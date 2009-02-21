@@ -1,0 +1,21 @@
+To install qombinatorics version x.y.z from sources:
+    $ tar xjf qombinatorcis-x.y.z.tar.bz2
+    $ cd pyxcom
+if needed become root:
+    $ su -
+and then install:
+    $ python setup.py install
+or (if you want to install under another directory)
+    $ python setup.py install --prefix=<dir>
+
+MAKE an RPM package
+If you installed tools to build rpm packages just run the following line
+of code:
+    $ python setup.py bdist --formats=rpm
+
+An rpm and a srpm will be created in the directory "./dist"
+The install them as usual: rpm -ivh path/name.rpm
+or upgrade: rpm -Uvh path/name.rpm
+
+In case of trouble you can mail me: I will try to help you
+alessandro...pisa@@@gmail...com
