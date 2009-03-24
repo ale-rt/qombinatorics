@@ -2,7 +2,7 @@
 from distutils.core import setup
 
 setup(name = "qombinatorics",
-      version = "0.2",
+      version = "0.3",
       description = "qombinatorics - a combination and permutation calculator",
       author = "Alessandro Pisa",
       author_email = "alessandro...pisa@@@gmail...com",
