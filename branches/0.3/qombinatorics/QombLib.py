@@ -158,11 +158,11 @@ class QombMainWindow(Ui_MainWindow):
         '''
         
         '''
+        super(Ui_MainWindow, self).__init__()
         self.index=0
         self.app = QtGui.QApplication([])
         self.MainWindow = QtGui.QMainWindow()
         self.setupUi(self.MainWindow)
-        super(Ui_MainWindow, self).__init__()
         # connecting signal slots
         self.app.connect(self.calculateButton, QtCore.SIGNAL("clicked()"), self.calculate)
         self.app.connect(self.action_About, QtCore.SIGNAL("triggered()"), self.about)
