@@ -4,11 +4,11 @@ COPYING
 INSTALL
 LICENSE
 MANIFEST
-QombGui.py
 README
 TODO
 setup.py
 qombinatorics/QombGui.py
 qombinatorics/QombLib.py
+qombinatorics/QombResources_rc.py
 qombinatorics/__init__.py
 scripts/qombinatorics
