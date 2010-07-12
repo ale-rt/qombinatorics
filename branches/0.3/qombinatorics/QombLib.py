@@ -1,5 +1,5 @@
 """
-Copyright (c) 2008 Alessandro Pisa <alessandro...pisa@@@gmail...com>
+Copyright (c) 2009 Alessandro Pisa <alessandro...pisa@@@gmail...com>
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -24,19 +24,20 @@ THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 from qombinatorics.QombGui import Ui_MainWindow, QtGui, QtCore
-#import QombResources
 
 from sys import exit
-VERSION = 1.0
+
+VERSION = "1.0rc1"
 
 BGCOLORS = ('white', '#eeeeee')
+QOMBICON16 = ":/img/icons/16/qombicon.png"
 
 def factorial(n):
     """Factorial calculation
     
     This is a really simple function
     it's argument should never be greater then 100 so we shouldn't have 
-    particular probs
+    particular problems
     
     >>> factorial(0)
     1L
@@ -47,7 +48,7 @@ def factorial(n):
     >>> factorial(100)
     933262154...4000000000000000000000000L
     """
-    if n == 0: 
+    if n == 0:
         return 1L
     else:
         return factorial(n - 1) * n
@@ -151,22 +152,31 @@ class QombMainWindow(Ui_MainWindow):
     >>> my.calculate()
     >>> my.output.toPlainText()
     PyQt4.QtCore.QString(u'Combination with ... subset! ')
-    
-    >>> import pdb; pdb.set_trace()
     '''
     def __init__(self):
         '''
-        
+        Constructing the class
         '''
         super(Ui_MainWindow, self).__init__()
-        self.index=0
+        self.index = 0
         self.app = QtGui.QApplication([])
         self.MainWindow = QtGui.QMainWindow()
+
         self.setupUi(self.MainWindow)
+        self.cursor = QtGui.QTextCursor(self.output.document())
+        self.cursor.movePosition(QtGui.QTextCursor.End)
+        self.scrollbar = self.output.verticalScrollBar()
         # connecting signal slots
         self.app.connect(self.calculateButton, QtCore.SIGNAL("clicked()"), self.calculate)
         self.app.connect(self.action_About, QtCore.SIGNAL("triggered()"), self.about)
-        
+
+    def appendResults(self, results):
+        """Appends the results in the TextEdit"""
+        self.output.append('')
+
+        self.cursor.insertHtml('<p>%s</p>' % results)
+        self.scrollbar.setValue(self.scrollbar.maximum())
+
     def combinationParser(self):
         '''
         gets user input from the interface and returns it as a dict 
@@ -189,9 +199,9 @@ class QombMainWindow(Ui_MainWindow):
         '''
         stuff = self.permutationParser()
         if stuff['k'] > stuff['n']:
-            return '''<br><img src=":/ui/icons/16/qombicon.png" alt="Error!">
+            return '''<br><img src="%s" alt="Error!">
                     Objects in set must be greater 
-                    than the number of pics!'''
+                    than the number of pics!''' % QOMBICON16
         else:
             stuff['answer'] = factorial(stuff['n']) / factorial(stuff['n'] - stuff['k'])
             return "%(n)s!/(%(n)s-%(k)s)! = %(answer)s" % stuff
@@ -210,22 +220,22 @@ class QombMainWindow(Ui_MainWindow):
         '''
         stuff = self.combinationParser()
         if stuff['k'] > stuff['n']:
-            return '''<br><img src=":/ui/icons/16/qombicon.png" alt="Error!">
+            return '''<br><img src="%s" alt="Error!">
                     Objects in set must be greater 
-                        than the one in subset!'''
+                        than the one in subset!''' % QOMBICON16
         else:
             stuff['answer'] = factorial(stuff['n']) / factorial(stuff['k']) / factorial(stuff['n'] - stuff['k'])
             return "%(n)s!/%(k)s!/(%(n)s-%(k)s)! = %(answer)s" % stuff
-    
+
     def combinationWithRepetition(self):
         '''
         handles button click when calculating combinations with repetitions
         '''
         stuff = self.combinationParser()
         if stuff['k'] > stuff['n']:
-            return '''<br><img src=":/ui/icons/16/qombicon.png" alt="Error!">
+            return '''<br><img src="%s" alt="Error!">
                         Objects in set must be greater 
-                        than the one in subset!'''
+                        than the one in subset!''' % QOMBICON16
         elif stuff['n'] == 0:
             # when n is zero the answer is always 1
             return "(%(n)s+%(k)s-1)!/%(k)s!/(%(n)s-1)! = 1" % stuff
@@ -244,16 +254,19 @@ class QombMainWindow(Ui_MainWindow):
             Alessandro Pisa
             <br><br>
             <b>Homepage</b><br>
-            <a href='http://darkmoon.altervista.org'>http://darkmoon.altervista.org</a>
+            <a href="http://darkmoon.altervista.org">http://darkmoon.altervista.org</a>
+            <br><br>
+            <b>The code</b><br>
+            <a href="http://http://code.google.com/p/qombinatorics/">http://code.google.com/p/qombinatorics</a>
             <br><br>
             <b>About combinatorics</b><br>
-            <a href='http://en.wikipedia.org/wiki/Combinatorics'>http://en.wikipedia.org/wiki/Combinatorics</a>
+            <a href="http://en.wikipedia.org/wiki/Combinatorics">http://en.wikipedia.org/wiki/Combinatorics</a>
             </div>
             """ % VERSION
         QtGui.QMessageBox.information(self.calculateButton,
                                       "About combinatorics",
                                       text)
-    
+
     def calculate(self):
         '''
         handler for button clicked signal
@@ -276,18 +289,16 @@ class QombMainWindow(Ui_MainWindow):
                 title = 'Combination without repetitions'
                 body = self.combinationWithoutRepetition()
         else:
-            title, body = "<h5><img src=':/ui/icon/16/qombicon.png'> Something is going wrong!!!</h5>", ''
-        
+            title, body = "<h2><img src='%s'> Something is going wrong!!!</h2>" % QOMBICON16, ''
         msg = """
-        <div style="border-top: solid black 1px">
-        <h5>%s</h5>
+        <h4>%s</h4>
         %s
-        </div>
+        <hr />
         """ % (title, body)
-    
-        self.output.append(msg)
+
+        self.appendResults(msg)
         self.index += 1
-        
+
 def run():
     '''
     window runner
@@ -295,7 +306,7 @@ def run():
     ui = QombMainWindow()
     ui.MainWindow.show()
     exit(ui.app.exec_())
-    
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod(optionflags=doctest.ELLIPSIS)

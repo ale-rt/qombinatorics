@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'QombGui.ui'
+# Form implementation generated from reading ui file 'qombinatorics/QombGui.ui'
 #
-# Created: Mon Apr 13 22:09:37 2009
-#      by: PyQt4 UI code generator 4.4.4
+# Created: Fri Jul  9 18:08:38 2010
+#      by: PyQt4 UI code generator 4.7.3
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -143,7 +143,7 @@ class Ui_MainWindow(object):
         self.vboxlayout.addLayout(self.hboxlayout7)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 340, 27))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 340, 19))
         self.menubar.setObjectName("menubar")
         self.menuInfo = QtGui.QMenu(self.menubar)
         self.menuInfo.setObjectName("menuInfo")
@@ -174,11 +174,13 @@ class Ui_MainWindow(object):
         self.output.setHtml(QtGui.QApplication.translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'Liberation Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Sans Serif\'; font-size:9pt;\"><span style=\" font-size:16pt; font-weight:600;\">qombinatorics</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Sans Serif\'; font-size:16pt; font-weight:600;\"><span style=\" font-size:10pt; font-weight:400;\">an application to calculate combination and permutation of objects</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Sans Serif\';\"></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Sans Serif\';\"><span style=\" font-weight:600;\">Info: http://darkmoon.altervista.org</span></p></body></html>", None, QtGui.QApplication.UnicodeUTF8))
+"</style></head><body style=\" font-family:\'DejaVu Sans\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/img/icons/16/qombicon.png\" /> <span style=\" font-family:\'Sans Serif\'; font-size:16pt; font-weight:600;\">qombinatorics</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Sans Serif\'; font-size:10pt;\">An application to calculate </span><span style=\" font-family:\'Sans Serif\'; font-size:10pt; font-weight:600;\">combination</span><span style=\" font-family:\'Sans Serif\'; font-size:10pt;\"> and </span><span style=\" font-family:\'Sans Serif\'; font-size:10pt; font-weight:600;\">permutation</span><span style=\" font-family:\'Sans Serif\'; font-size:10pt;\"> of objects</span></p>\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'Sans Serif\'; font-size:10pt;\"></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Sans Serif\'; font-size:10pt; font-weight:600;\">Further info </span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"http://darkmoon.altervista.org\"><span style=\" text-decoration: underline; color:#456fa2;\">http://darkmoon.altervista.org</span></a></p>\n"
+"<hr /></body></html>", None, QtGui.QApplication.UnicodeUTF8))
         self.label_3.setText(QtGui.QApplication.translate("MainWindow", "Objects in set", None, QtGui.QApplication.UnicodeUTF8))
         self.label_4.setText(QtGui.QApplication.translate("MainWindow", "Number of picks", None, QtGui.QApplication.UnicodeUTF8))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QtGui.QApplication.translate("MainWindow", "&Permutations", None, QtGui.QApplication.UnicodeUTF8))
