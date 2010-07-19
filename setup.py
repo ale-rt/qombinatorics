@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 from distutils.core import setup
 
-setup(name = "qombinatorics",
-      version = "0.2",
-      description = "qombinatorics - a combination and permutation calculator",
-      author = "Alessandro Pisa",
-      author_email = "alessandro...pisa@@@gmail...com",
-      url = "http://darkmoon.altervista.org",
-      packages = ["qombinatorics", ""],
-      scripts = ['scripts/qombinatorics'],
-      long_description = """
+setup(name="qombinatorics",
+      version="1.0rc1",
+      description="qombinatorics - a combination and permutation calculator",
+      author="Alessandro Pisa",
+      author_email="alessandro...pisa@@@gmail...com",
+      url="http://darkmoon.altervista.org",
+      packages=["qombinatorics", ""],
+      scripts=['scripts/qombinatorics'],
+      long_description="""
 qombinatorics aims to be a complete resource for combinatorics calulations.
 
 Combinatorics, in mathematic, is the study of the many possible way to arrange a given set of objects. (http://en.wikipedia.org/wiki/Combinatorics)

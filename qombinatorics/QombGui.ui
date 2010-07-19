@@ -1,108 +1,77 @@
-<ui version="4.0" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
  <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow" >
-  <property name="geometry" >
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>334</width>
-    <height>369</height>
+    <width>340</width>
+    <height>400</height>
    </rect>
   </property>
-  <property name="windowTitle" >
+  <property name="windowTitle">
    <string>Qombinatorics</string>
   </property>
-  <property name="windowIcon" >
-   <iconset>../messagebox_warning.png</iconset>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/ui/icons/qombicon.svg</normaloff>:/ui/icons/qombicon.svg</iconset>
   </property>
-  <widget class="QWidget" name="centralwidget" >
-   <layout class="QVBoxLayout" >
-    <property name="spacing" >
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout">
+    <property name="spacing">
      <number>0</number>
     </property>
     <item>
-     <widget class="QTextBrowser" name="output" >
-      <property name="palette" >
-       <palette>
-        <active>
-         <colorrole role="Base" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
-            <red>255</red>
-            <green>255</green>
-            <blue>191</blue>
-           </color>
-          </brush>
-         </colorrole>
-        </active>
-        <inactive>
-         <colorrole role="Base" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
-            <red>255</red>
-            <green>255</green>
-            <blue>191</blue>
-           </color>
-          </brush>
-         </colorrole>
-        </inactive>
-        <disabled>
-         <colorrole role="Base" >
-          <brush brushstyle="SolidPattern" >
-           <color alpha="255" >
-            <red>226</red>
-            <green>217</green>
-            <blue>212</blue>
-           </color>
-          </brush>
-         </colorrole>
-        </disabled>
-       </palette>
-      </property>
-      <property name="html" >
-       <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+     <widget class="QTextBrowser" name="output">
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style>&lt;/head>&lt;body style=" font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;">&lt;span style=" font-size:16pt; font-weight:600;">qombinatorics&lt;/span>&lt;/p>
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:16pt; font-weight:600;">&lt;span style=" font-size:10pt; font-weight:400;">an application to calculate combination and permutation of objects&lt;/span>&lt;/p>
-&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;/p>
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-weight:600;">Info: http://darkmoon.altervista.org&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'DejaVu Sans'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;hr /&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/img/icons/16/qombicon.png&quot; /&gt; &lt;span style=&quot; font-family:'Sans Serif'; font-size:16pt; font-weight:600;&quot;&gt;qombinatorics&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif'; font-size:10pt;&quot;&gt;An application to calculate &lt;/span&gt;&lt;span style=&quot; font-family:'Sans Serif'; font-size:10pt; font-weight:600;&quot;&gt;combination&lt;/span&gt;&lt;span style=&quot; font-family:'Sans Serif'; font-size:10pt;&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-family:'Sans Serif'; font-size:10pt; font-weight:600;&quot;&gt;permutation&lt;/span&gt;&lt;span style=&quot; font-family:'Sans Serif'; font-size:10pt;&quot;&gt; of objects&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif'; font-size:10pt; font-weight:600;&quot;&gt;Further info &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://darkmoon.altervista.org/en/&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#456fa2;&quot;&gt;http://darkmoon.altervista.org/en&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;hr /&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QTabWidget" name="tabWidget" >
-      <property name="sizePolicy" >
-       <sizepolicy vsizetype="Minimum" hsizetype="Expanding" >
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
-      <property name="tabPosition" >
+      <property name="tabPosition">
        <enum>QTabWidget::North</enum>
       </property>
-      <property name="currentIndex" >
+      <property name="currentIndex">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="tab" >
-       <attribute name="title" >
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
         <string>&amp;Permutations</string>
        </attribute>
-       <layout class="QVBoxLayout" >
+       <layout class="QVBoxLayout">
         <item>
-         <layout class="QHBoxLayout" >
+         <layout class="QHBoxLayout">
           <item>
-           <layout class="QVBoxLayout" >
+           <layout class="QVBoxLayout">
             <item>
-             <widget class="QLabel" name="label_3" >
-              <property name="text" >
+             <widget class="QLabel" name="label_3">
+              <property name="text">
                <string>Objects in set</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_4" >
-              <property name="text" >
+             <widget class="QLabel" name="label_4">
+              <property name="text">
                <string>Number of picks</string>
               </property>
              </widget>
@@ -110,15 +79,15 @@ p, li { white-space: pre-wrap; }
            </layout>
           </item>
           <item>
-           <layout class="QVBoxLayout" >
+           <layout class="QVBoxLayout">
             <item>
-             <layout class="QHBoxLayout" >
+             <layout class="QHBoxLayout">
               <item>
-               <widget class="QSpinBox" name="permutationSpin" />
+               <widget class="QSpinBox" name="permutationSpin"/>
               </item>
               <item>
-               <widget class="QSlider" name="sliderSetPermutations" >
-                <property name="orientation" >
+               <widget class="QSlider" name="sliderSetPermutations">
+                <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
@@ -126,13 +95,13 @@ p, li { white-space: pre-wrap; }
              </layout>
             </item>
             <item>
-             <layout class="QHBoxLayout" >
+             <layout class="QHBoxLayout">
               <item>
-               <widget class="QSpinBox" name="picksSpin" />
+               <widget class="QSpinBox" name="picksSpin"/>
               </item>
               <item>
-               <widget class="QSlider" name="sliderPicks" >
-                <property name="orientation" >
+               <widget class="QSlider" name="sliderPicks">
+                <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
@@ -145,25 +114,25 @@ p, li { white-space: pre-wrap; }
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tab_2" >
-       <attribute name="title" >
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
         <string>&amp;Combinations</string>
        </attribute>
-       <layout class="QVBoxLayout" >
+       <layout class="QVBoxLayout">
         <item>
-         <layout class="QHBoxLayout" >
+         <layout class="QHBoxLayout">
           <item>
-           <layout class="QVBoxLayout" >
+           <layout class="QVBoxLayout">
             <item>
-             <widget class="QLabel" name="label" >
-              <property name="text" >
+             <widget class="QLabel" name="label">
+              <property name="text">
                <string>Objects in set</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_2" >
-              <property name="text" >
+             <widget class="QLabel" name="label_2">
+              <property name="text">
                <string>Objects in subset</string>
               </property>
              </widget>
@@ -171,15 +140,15 @@ p, li { white-space: pre-wrap; }
            </layout>
           </item>
           <item>
-           <layout class="QVBoxLayout" >
+           <layout class="QVBoxLayout">
             <item>
-             <layout class="QHBoxLayout" >
+             <layout class="QHBoxLayout">
               <item>
-               <widget class="QSpinBox" name="spinSet" />
+               <widget class="QSpinBox" name="spinSet"/>
               </item>
               <item>
-               <widget class="QSlider" name="sliderSet" >
-                <property name="orientation" >
+               <widget class="QSlider" name="sliderSet">
+                <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
@@ -187,13 +156,13 @@ p, li { white-space: pre-wrap; }
              </layout>
             </item>
             <item>
-             <layout class="QHBoxLayout" >
+             <layout class="QHBoxLayout">
               <item>
-               <widget class="QSpinBox" name="spinSubset" />
+               <widget class="QSpinBox" name="spinSubset"/>
               </item>
               <item>
-               <widget class="QSlider" name="sliderSubset" >
-                <property name="orientation" >
+               <widget class="QSlider" name="sliderSubset">
+                <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
@@ -209,16 +178,16 @@ p, li { white-space: pre-wrap; }
      </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" >
-      <property name="bottomMargin" >
+     <layout class="QHBoxLayout">
+      <property name="bottomMargin">
        <number>10</number>
       </property>
       <item>
        <spacer>
-        <property name="orientation" >
+        <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
-        <property name="sizeHint" >
+        <property name="sizeHint" stdset="0">
          <size>
           <width>40</width>
           <height>20</height>
@@ -227,27 +196,27 @@ p, li { white-space: pre-wrap; }
        </spacer>
       </item>
       <item>
-       <widget class="QCheckBox" name="repetitionCheckBox" >
-        <property name="sizePolicy" >
-         <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+       <widget class="QCheckBox" name="repetitionCheckBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="text" >
+        <property name="text">
          <string>Allow &amp;repetitions</string>
         </property>
-        <property name="checked" >
+        <property name="checked">
          <bool>true</bool>
         </property>
        </widget>
       </item>
       <item>
        <spacer>
-        <property name="orientation" >
+        <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
-        <property name="sizeHint" >
+        <property name="sizeHint" stdset="0">
          <size>
           <width>40</width>
           <height>20</height>
@@ -258,20 +227,20 @@ p, li { white-space: pre-wrap; }
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" >
+     <layout class="QHBoxLayout">
       <item>
-       <widget class="QPushButton" name="calculateButton" >
-        <property name="text" >
+       <widget class="QPushButton" name="calculateButton">
+        <property name="text">
          <string>&amp;Execute</string>
         </property>
        </widget>
       </item>
       <item>
        <spacer>
-        <property name="orientation" >
+        <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
-        <property name="sizeHint" >
+        <property name="sizeHint" stdset="0">
          <size>
           <width>40</width>
           <height>20</height>
@@ -280,8 +249,8 @@ p, li { white-space: pre-wrap; }
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="quitButton" >
-        <property name="text" >
+       <widget class="QPushButton" name="quitButton">
+        <property name="text">
          <string>&amp;Quit</string>
         </property>
        </widget>
@@ -290,31 +259,33 @@ p, li { white-space: pre-wrap; }
     </item>
    </layout>
   </widget>
-  <widget class="QMenuBar" name="menubar" >
-   <property name="geometry" >
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>334</width>
-     <height>26</height>
+     <width>340</width>
+     <height>19</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuInfo" >
-    <property name="title" >
+   <widget class="QMenu" name="menuInfo">
+    <property name="title">
      <string>&amp;Help</string>
     </property>
-    <addaction name="action_About" />
+    <addaction name="action_About"/>
    </widget>
-   <addaction name="menuInfo" />
+   <addaction name="menuInfo"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar" />
-  <action name="action_About" >
-   <property name="text" >
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_About">
+   <property name="text">
     <string>&amp;About...</string>
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="QombResources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>quitButton</sender>
@@ -322,11 +293,11 @@ p, li { white-space: pre-wrap; }
    <receiver>MainWindow</receiver>
    <slot>close()</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>416</x>
      <y>455</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>281</x>
      <y>304</y>
     </hint>
@@ -338,11 +309,11 @@ p, li { white-space: pre-wrap; }
    <receiver>sliderSet</receiver>
    <slot>setValue(int)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>156</x>
      <y>83</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>202</x>
      <y>79</y>
     </hint>
@@ -354,11 +325,11 @@ p, li { white-space: pre-wrap; }
    <receiver>spinSet</receiver>
    <slot>setValue(int)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>206</x>
      <y>82</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>166</x>
      <y>80</y>
     </hint>
@@ -370,11 +341,11 @@ p, li { white-space: pre-wrap; }
    <receiver>sliderSubset</receiver>
    <slot>setValue(int)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>142</x>
      <y>116</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>194</x>
      <y>114</y>
     </hint>
@@ -386,11 +357,11 @@ p, li { white-space: pre-wrap; }
    <receiver>spinSubset</receiver>
    <slot>setValue(int)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>207</x>
      <y>111</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>165</x>
      <y>111</y>
     </hint>
@@ -402,11 +373,11 @@ p, li { white-space: pre-wrap; }
    <receiver>sliderSetPermutations</receiver>
    <slot>setValue(int)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>145</x>
      <y>81</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>258</x>
      <y>81</y>
     </hint>
@@ -418,11 +389,11 @@ p, li { white-space: pre-wrap; }
    <receiver>permutationSpin</receiver>
    <slot>setValue(int)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>230</x>
      <y>75</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>160</x>
      <y>80</y>
     </hint>
@@ -434,11 +405,11 @@ p, li { white-space: pre-wrap; }
    <receiver>sliderPicks</receiver>
    <slot>setValue(int)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>157</x>
      <y>105</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>192</x>
      <y>109</y>
     </hint>
@@ -450,11 +421,11 @@ p, li { white-space: pre-wrap; }
    <receiver>picksSpin</receiver>
    <slot>setValue(int)</slot>
    <hints>
-    <hint type="sourcelabel" >
+    <hint type="sourcelabel">
      <x>190</x>
      <y>117</y>
     </hint>
-    <hint type="destinationlabel" >
+    <hint type="destinationlabel">
      <x>167</x>
      <y>118</y>
     </hint>
